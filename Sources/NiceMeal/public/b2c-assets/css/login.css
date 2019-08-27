@@ -1,0 +1,230 @@
+#page-login {
+  background-image: url("/b2c-assets/img/bg-new.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 {
+  float: right;
+  padding-left: 9%;
+  padding-right: 0px;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel {
+  background: #EF0F0B;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .logo-header .logo-new {
+  margin-left: 15%;
+  width: 65%;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .title-form-login {
+  padding: 0px 16px;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .title-form-login .title-form .title-form-login .col-icon .fa-arrow-left {
+  margin-top: -3px;
+  color: antiquewhite;
+  font-size: 16px;
+  padding-left: 10%;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .title-form-login .title-form .title-form-login .col-title .title-text-login {
+  color: white;
+  font-size: 22px;
+  margin: 0px;
+  margin-top: 4px;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .form-group .text-form-detail {
+  color: white;
+  padding-left: 3%;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .separator-login {
+  padding: 0% 7%;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .separator-login .separator {
+  text-align: center;
+  position: relative;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .separator-login .separator .separator-text {
+  position: relative;
+  background: #EF0F0B;
+  color: white;
+  top: -17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .text-link p {
+  text-align: center;
+  margin-bottom: 13px;
+  padding-top: 10px;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .text-link p .forgot-password {
+  cursor: pointer;
+  padding-bottom: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 15px;
+  color: bisque;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .text-link p .create-account {
+  cursor: pointer;
+  padding-bottom: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 15px;
+  color: bisque;
+}
+
+#page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .register-form .form-group .text-form-detail .red {
+  color: white;
+  margin-left: 5px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #page-login .login__section .md-tb .container .login-row .form-login .col-md-8 .login__panel .login-form .btn-btn-login .btn-btn-sub {
+    margin-top: 14%;
+  }
+}
+
+@media (max-width: 812px) {
+  #page-login .login__section .md-tb .container .login-row .form-login .btn-btn-login {
+    width: 106%;
+    padding-left: 10px;
+  }
+
+  #page-login .login__section .md-tb .container .login-row .form-login .btn-btn-login .btn-btn-sub {
+    margin-top: 9%;
+  }
+}
+
+@media (max-width: 1020px) {
+  #page-login .login__section .md-tb .container .login-row .form-login .btn-btn-login {
+    width: 106%;
+    padding-left: 10px;
+  }
+
+  #page-login .login__section .md-tb .container .login-row .form-login .btn-btn-login .btn-btn-sub {
+    margin-top: 14%;
+  }
+}
+
+#page-register {
+  background-image: url("/b2c-assets/img/bg-new.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register {
+  padding-left: 20%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel {
+  display: inline-block;
+  background: #EF0F0B;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .logo-header .logo-new {
+  margin-left: 15%;
+  width: 65%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .title-form-login {
+  padding: 0px 16px;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .title-form-login .title-form .title-form-login .col-icon .fa-arrow-left {
+  margin-top: -3px;
+  color: antiquewhite;
+  font-size: 16px;
+  padding-left: 10%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .title-form-login .title-form .title-form-login .col-title .title-text-login {
+  color: white;
+  font-size: 22px;
+  margin: 0px;
+  margin-top: 4px;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .form-group .text-form-detail {
+  color: white;
+  padding-left: 3%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .separator-login {
+  padding: 0% 7%;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .separator-login .separator {
+  text-align: center;
+  position: relative;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .separator-login .separator .separator-text {
+  position: relative;
+  background: #EF0F0B;
+  color: white;
+  top: -17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .text-link p {
+  text-align: center;
+  margin-bottom: 13px;
+  padding-top: 10px;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .text-link p .forgot-password {
+  cursor: pointer;
+  padding-bottom: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 15px;
+  color: bisque;
+}
+
+#page-register .register__section .md-tb .md-tb__cell .container .row .form-register .register__panel .register-detail .text-link p .create-account {
+  cursor: pointer;
+  padding-bottom: 15px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  font-size: 15px;
+  color: bisque;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #page-register .register__section .md-tb .container .row .form-register {
+    padding-top: 12%;
+  }
+
+  #page-register .register__section .md-tb .container .row .form-register .register__panel .register-detail {
+    padding: 0px 5%;
+  }
+}
+
+@media (max-width: 830px) and (max-device-width: 830px) {
+  #page-register .register__section .md-tb .container .row .form-register {
+    padding-top: 21%;
+  }
+
+  #page-register .register__section .md-tb .container .row .form-register .title-form-login .title-form .title-form-login .col-icon .fa-arrow-left {
+    padding-left: 0px;
+  }
+}
+

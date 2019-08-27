@@ -1,0 +1,352 @@
+//Page login new
+#page-login {
+	background-image: url('/b2c-assets/img/bg-new.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	.login__section{
+		.md-tb{
+			.container{
+				.login-row{
+					.form-login{
+						.col-md-8{
+							float: right;
+							padding-left: 9%;
+							padding-right: 0px;
+							.login__panel{
+								background: #EF0F0B;
+								.logo-header{
+									.logo-new{
+										margin-left: 15%;
+										width: 65%;
+									}
+								}
+								.title-form-login{
+									padding: 0px 16px;
+									.title-form{
+										.title-form-login{
+											.col-icon{
+												.fa-arrow-left{
+													margin-top: -3px;
+													color: antiquewhite;
+													font-size: 16px;
+													padding-left: 10%;
+												}
+											}
+											.col-title{
+												.title-text-login{
+													color: white;
+													font-size: 22px;
+													margin: 0px;
+													margin-top: 4px;
+												}
+											}
+										}
+									}
+								}
+								.login-form{
+									.form-group{
+										.text-form-detail{
+											color: white;
+											padding-left: 3%;
+										}
+									}
+									.separator-login{
+										padding: 0% 7%;
+										.separator{
+											text-align: center;
+											position: relative;
+											height: 1px;
+											border-bottom: 1px solid white;
+											.separator-text{
+												position: relative;
+												background: #EF0F0B;
+												color: white;
+												top: -17px;
+												padding-left: 20px;
+												padding-right: 20px;
+												font-size: 20px;
+											}
+										}
+									}
+									.text-link{
+										p{
+											text-align: center; 
+											margin-bottom: 13px;
+											padding-top: 10px;
+											.forgot-password{
+												cursor: pointer;
+												padding-bottom: 15px;
+												text-decoration-line: underline;
+												font-size: 15px;
+												color: bisque;
+											}
+											.create-account{
+												cursor: pointer;
+												padding-bottom: 15px;
+												text-decoration-line: underline;
+												font-size: 15px;
+												color: bisque;
+											}
+										}
+									}
+									//register
+									.register-form{
+										.form-group{
+											.text-form-detail{
+												.red{
+													color: white;
+													margin-left: 5px;
+
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
+	#page-login {
+		.login__section{
+			.md-tb{
+				.container{
+					.login-row{
+						.form-login{
+							.col-md-8{
+								.login__panel{
+									.login-form{
+										.btn-btn-login{
+											.btn-btn-sub{
+												margin-top: 14%;
+											}
+										}
+									}	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//iphone
+@media (max-width: 830px) and (max-device-width: 830px) {
+	#page-login {
+		.login__section{
+			.md-tb{
+				.container{
+					.login-row{
+						.form-login{
+							.col-md-8{
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 812px){
+	#page-login {
+		.login__section{
+			.md-tb{
+				.container{
+					.login-row{
+						.form-login{
+							.btn-btn-login{
+								width: 106%;
+								padding-left: 10px;
+								.btn-btn-sub{
+									margin-top: 9%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1020px){
+	#page-login {
+		.login__section{
+			.md-tb{
+				.container{
+					.login-row{
+						.form-login{
+							.btn-btn-login{
+								width: 106%;
+								padding-left: 10px;
+								.btn-btn-sub{
+									margin-top: 14%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//page register new
+#page-register{
+	background-image: url('/b2c-assets/img/bg-new.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	.register__section{
+		.md-tb{
+			.md-tb__cell{
+				.container{
+					.row{
+						.form-register{
+							padding-left: 20%;
+							.register__panel{
+								display: inline-block;
+								background: #EF0F0B;
+								.logo-header{
+									.logo-new{
+										margin-left: 15%;
+										width: 65%;
+									}
+								}
+								.title-form-login{
+									padding: 0px 16px;
+									.title-form{
+										.title-form-login{
+											.col-icon{
+												.fa-arrow-left{
+													margin-top: -3px;
+													color: antiquewhite;
+													font-size: 16px;
+													padding-left: 10%;
+												}
+											}
+											.col-title{
+												.title-text-login{
+													color: white;
+													font-size: 22px;
+													margin: 0px;
+													margin-top: 4px;
+												}
+											}
+										}
+									}
+								}
+								.register-detail{
+									.form-group{
+										.text-form-detail{
+											color: white;
+											padding-left: 3%;
+										}
+									}
+									.separator-login{
+										padding: 0% 7%;
+										.separator{
+											text-align: center;
+											position: relative;
+											height: 1px;
+											border-bottom: 1px solid white;
+											.separator-text{
+												position: relative;
+												background: #EF0F0B;
+												color: white;
+												top: -17px;
+												padding-left: 20px;
+												padding-right: 20px;
+												font-size: 20px;
+											}
+										}
+									}
+									.text-link{
+										p{
+											text-align: center; 
+											margin-bottom: 13px;
+											padding-top: 10px;
+											.forgot-password{
+												cursor: pointer;
+												padding-bottom: 15px;
+												text-decoration-line: underline;
+												font-size: 15px;
+												color: bisque;
+											}
+											.create-account{
+												cursor: pointer;
+												padding-bottom: 15px;
+												text-decoration-line: underline;
+												font-size: 15px;
+												color: bisque;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
+	#page-register {
+		.register__section{
+			.md-tb{
+				.container{
+					.row{
+						.form-register{
+							padding-top: 12%;
+							.register__panel{
+								.register-detail{
+									padding: 0px 5%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 830px) and (max-device-width: 830px) {
+	#page-register {
+		.register__section{
+			.md-tb{
+				.container{
+					.row{
+						.form-register{
+							padding-top: 21%;
+							.title-form-login{
+								.title-form{
+									.title-form-login{
+										.col-icon{
+											.fa-arrow-left{
+												padding-left: 0px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

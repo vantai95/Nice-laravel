@@ -1,0 +1,855 @@
+.maincontent.restaurants {
+  margin: 0 30px;
+}
+
+.maincontent.restaurants .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: .25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.maincontent.restaurants .dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.maincontent.restaurants .filter .search {
+  width: 70%;
+  float: left;
+  border-bottom: 1px solid #fec328;
+}
+
+.maincontent.restaurants .filter .search input {
+  padding: 0 40px !important;
+}
+
+.maincontent.restaurants .filter .search input[type="text"] {
+  width: 96%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 2%;
+  outline: none;
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px !important;
+}
+
+.maincontent.restaurants .filter .search input[type="text"]:focus {
+  border-color: dodgerBlue;
+  -webkit-box-shadow: 0 0 8px 0 dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon {
+  position: relative;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon i {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 8px;
+  padding: 9px 8px;
+  color: #aaa;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon.inputIconBg i {
+  padding: 6px 15px;
+  border-radius: 4px 0 0 4px;
+}
+
+.maincontent.restaurants .filter .search .inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.maincontent.restaurants .filter .search button {
+  padding: unset;
+  margin-top: unset;
+  border: unset;
+  padding: 0 45px;
+  height: 50px;
+}
+
+.maincontent.restaurants .filter .search button span {
+  font-size: 14px;
+  color: #000;
+}
+
+.maincontent.restaurants .filter .search button:after {
+  font-family: FontAwesome;
+  content: "\F078";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.maincontent.restaurants .filter .search .ms-options > ul input[type="checkbox"] {
+  display: none;
+}
+
+.maincontent.restaurants .filter .search .ms-options {
+  min-height: 300px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.maincontent.restaurants .filter .search .ms-options ul {
+  width: 96%;
+  margin: 0 2%;
+}
+
+.maincontent.restaurants .filter .search .ms-options ul li.optgroup {
+  clear: unset !important;
+  width: 50%;
+  float: left;
+  border-top: unset;
+}
+
+.maincontent.restaurants .filter .search .ms-options ul li.optgroup span.label {
+  color: #B20016;
+  font-weight: 700;
+}
+
+.maincontent.restaurants .filter .search .ms-options ul li.selected label {
+  background-color: #FFA80D;
+  border-radius: 20px;
+  color: #B20016;
+  font-weight: 700;
+}
+
+.maincontent.restaurants .filter .search .ms-options > ul label:hover {
+  background-color: #FFA80D;
+  border-radius: 20px;
+  color: #B20016;
+  font-weight: 700;
+}
+
+.maincontent.restaurants .filter .search .ms-options > ul label {
+  padding: 2px 10px;
+  width: auto;
+  border: unset;
+}
+
+.maincontent.restaurants .filter .search .ms-options {
+  width: 143%;
+  margin-top: 5px;
+}
+
+.maincontent.restaurants .filter .search .ms-options .cuisine-buttom,
+.maincontent.restaurants .filter .search .ms-options .categories-buttom {
+  text-align: center;
+}
+
+.maincontent.restaurants .filter .random {
+  width: 28%;
+  margin-left: 2%;
+  float: left;
+  position: relative;
+  border-bottom: 1px solid #fec328;
+}
+
+.maincontent.restaurants .filter .random select {
+  color: #B20016;
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+.maincontent.restaurants .filter .random select option {
+  font-weight: 700;
+}
+
+.maincontent.restaurants .filter .random select + i.fa {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+.maincontent.restaurants .filter input,
+.maincontent.restaurants .filter select {
+  border-radius: unset !important;
+}
+
+.maincontent.restaurants .widget-title h4 {
+  color: #B20016;
+  width: 70%;
+  float: left;
+}
+
+.maincontent.restaurants #btn-top {
+  color: #B20016;
+  float: right;
+  background-color: transparent;
+  border: 2px solid #fec328;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 90px;
+  margin: 20px 0;
+}
+
+.maincontent.restaurants .restaurants-list {
+  margin-top: 30px;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product {
+  padding-left: 0px;
+  margin-bottom: 15px;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .image {
+  float: left;
+  width: 25%;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right {
+  float: left;
+  width: 70%;
+  margin-left: 5%;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right .res-name {
+  margin: unset;
+  color: #939393;
+  font-weight: unset;
+  width: 90%;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right .navbar-inverse {
+  width: 10%;
+  float: left;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right .navbar-inverse .dropdown-menu {
+  left: unset;
+  right: -10px;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right .navbar-inverse .dropdown-menu li a .fa {
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right .text {
+  padding-top: unset;
+  margin-bottom: unset;
+  font-style: italic;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right ul.favorite {
+  width: 100%;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right ul.favorite li {
+  color: #000;
+  font-weight: 500;
+  width: 50%;
+  float: left;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .res-right ul.favorite li .ratting li {
+  width: 70%;
+}
+
+.maincontent.restaurants .restaurants-list .col-md-6.product .line {
+  clear: both;
+  display: -webkit-box;
+}
+
+.maincontent.restaurants .filter-active .ms-options {
+  position: absolute;
+  width: 93% !important;
+  z-index: 1050;
+  opacity: 1;
+  background-color: #fff;
+}
+
+.maincontent.restaurants .filter-active .fa-filter,
+.maincontent.restaurants .filter-active .random select {
+  color: red !important;
+}
+
+.maincontent.restaurants .res-active {
+  margin-top: 90px;
+}
+
+.maincontent.restaurants .random-disabled select {
+  opacity: 0;
+}
+
+.maincontent.restaurants #filter-search {
+  position: relative;
+}
+
+.maincontent.restaurants #filter-search:after {
+  font-family: FontAwesome;
+  content: "\F078";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+@media only screen and (max-width: 1256px) {
+  .maincontent.restaurants .restaurants-list .res-name {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .maincontent.restaurants .random select {
+    padding: 0 20px;
+  }
+
+  .maincontent.restaurants .random i {
+    right: 5px !important;
+    top: 18px !important;
+  }
+
+  .maincontent.restaurants .restaurants-list ul.favorite .ratting li {
+    width: 75% !important;
+  }
+}
+
+@media only screen and (max-width: 1070px) and (min-width: 1010px) {
+  .maincontent.restaurants .res-right .favorite li {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 1009px) and (min-width: 991px) {
+  .maincontent.restaurants .res-right .favorite li {
+    font-size: 12px;
+  }
+}
+
+.detail-restaurant {
+  margin: 0 30px;
+}
+
+.detail-restaurant .header .col-text p {
+  padding-top: unset;
+}
+
+.detail-restaurant .header .col-text .res-name {
+  font-weight: 700;
+  color: #515151;
+  font-size: 25px;
+  position: relative;
+  margin-bottom: unset;
+}
+
+.detail-restaurant .header .col-text .res-name i.icon-heart {
+  margin-top: 10px;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+}
+
+.detail-restaurant .header .col-text .res-title {
+  font-style: italic;
+  margin-bottom: unset;
+  margin-top: -5px;
+}
+
+.detail-restaurant .header .col-text .res-btn {
+  margin-top: 5px;
+  margin-bottom: unset;
+}
+
+.detail-restaurant .header .col-text .res-btn .btn-talk {
+  background-color: #ffbb0d;
+  border: 0px;
+  border-radius: 30px;
+  padding: 3px;
+  width: 70%;
+  -webkit-filter: drop-shadow(1px 6px 2px black);
+  filter: drop-shadow(1px 6px 2px black);
+  color: #B20016;
+  font-weight: 700;
+}
+
+.detail-restaurant .header .col-description .description {
+  width: 90%;
+  float: left;
+  padding-top: 30px;
+}
+
+.detail-restaurant .header .col-description .navbar {
+  width: 10%;
+  float: left;
+}
+
+.detail-restaurant .header .col-description .navbar .fa-ellipsis-h:before {
+  font-size: 20px;
+}
+
+.detail-restaurant .header .col-description .navbar .dropdown-menu {
+  left: unset;
+  right: -10px;
+}
+
+.detail-restaurant .header .col-description .navbar .dropdown-menu li a .fa {
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.detail-restaurant .category-menu {
+  position: relative;
+  margin: 0 -30px;
+  padding: 5px;
+  -webkit-box-shadow: 0px 2px 4px 1px #c8c8c8;
+          box-shadow: 0px 2px 4px 1px #c8c8c8;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-wrapper-outer {
+  width: 96%;
+  margin: 0 2%;
+}
+
+.detail-restaurant .category-menu #owl-demo .item {
+  width: 100%;
+  float: left;
+  padding: 0 5px;
+  margin: 0 10px;
+  text-align: center;
+  color: #B20016;
+}
+
+.detail-restaurant .category-menu #owl-demo .item:hover,
+.detail-restaurant .category-menu #owl-demo .item.selected {
+  background-color: #FFA80D;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-prev {
+  position: absolute;
+  float: left;
+  top: -32%;
+  left: -23px;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-prev .fa {
+  border-right: 17px solid;
+  border-radius: 50%;
+  padding: 8px 9px;
+  width: 17px;
+  height: 30px;
+  margin-top: 4px;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-prev .fa-chevron-left:before {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-next {
+  position: absolute;
+  top: 6%;
+  top: -32%;
+  right: -23px;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-next .fa {
+  border-left: 17px solid;
+  border-radius: 50%;
+  padding: 8px 9px;
+  width: 17px;
+  height: 30px;
+  margin-top: 4px;
+}
+
+.detail-restaurant .category-menu #owl-demo .owl-buttons .owl-next .fa-chevron-right:before {
+  margin: 0 -20px;
+  color: #fff;
+}
+
+.detail-restaurant .main p {
+  margin-bottom: unset;
+  padding-top: unset;
+}
+
+.detail-restaurant .main .vat p {
+  font-style: italic;
+  color: #B20016;
+  width: 100%;
+  text-align: -webkit-right;
+  padding-top: 10px;
+}
+
+.detail-restaurant .main .title p.text {
+  font-size: 20px;
+  color: #B20016;
+  font-weight: 700;
+}
+
+.detail-restaurant .main .product .name p {
+  font-weight: 700;
+  color: #515151;
+  font-size: 25px;
+}
+
+.detail-restaurant .main .product .promotion {
+  padding: unset;
+}
+
+.detail-restaurant .main .product .price {
+  padding: unset;
+  text-align: -webkit-right;
+}
+
+.detail-restaurant .main .product .price span {
+  font-size: 20px;
+  color: #515151;
+}
+
+.detail-restaurant .main .product .price button {
+  background-color: #ffbb0d;
+  border: 0;
+}
+
+.detail-restaurant .main .product .price i {
+  color: #B20016;
+}
+
+.detail-restaurant .main .product .not-available {
+  opacity: 0.5;
+  -webkit-filter: opacity(0.4);
+          filter: opacity(0.4);
+}
+
+.detail-restaurant .main .product .btn-disable {
+  background-color: #dddddd !important;
+}
+
+.detail-restaurant .main .product .unclickable {
+  pointer-events: none;
+}
+
+.detail-restaurant .main .product .not-available-text {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #898989;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 415px) {
+  .detail-restaurant .main .product .not-available-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .detail-restaurant .main .product .not-available-text {
+    font-size: 12px;
+  }
+}
+
+.detail-restaurant .main .product hr {
+  float: left;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1230px) and (min-width: 1120px) {
+  .detail-restaurant .header .res-name {
+    font-size: 20px !important;
+  }
+
+  .detail-restaurant .main .product .name p {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 1119px) {
+  .detail-restaurant .header .res-name {
+    font-size: 20px !important;
+  }
+
+  .detail-restaurant .header .res-name i.icon-heart {
+    margin-top: 5px !important;
+    right: -25px !important;
+  }
+
+  .detail-restaurant .header .res-title {
+    font-size: 13px !important;
+  }
+
+  .detail-restaurant .main .product .name p {
+    font-size: 20px !important;
+  }
+}
+
+.checkout-page b {
+  border-top-color: #939393 !important;
+}
+
+.checkout-page label {
+  color: #515151;
+  font-weight: 700;
+}
+
+.checkout-page h6 {
+  color: #c02e40;
+}
+
+.checkout-page .contact,
+.checkout-page .delivery,
+.checkout-page .note,
+.checkout-page .tax-info-section,
+.checkout-page .payment {
+  margin-top: 15px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 8px 1px #c8c8c8;
+  box-shadow: 0px 0px 8px 1px #c8c8c8;
+}
+
+.checkout-page .note .delivery-time .dash {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.checkout-page .note .delivery-time .calender .note-date {
+  position: relative;
+  padding: 0 50px !important;
+}
+
+.checkout-page .note .delivery-time .calender .fa-calendar {
+  position: absolute;
+  z-index: 999;
+  top: 15px;
+  font-size: 20px;
+  left: 27px;
+}
+
+.checkout-page .note .delivery-time .calender .hide-calender {
+  padding: 0 25px !important;
+}
+
+.checkout-page .note .delivery-time .calender .modal-datepicker button {
+  position: absolute;
+  right: 0;
+  top: -49px;
+  width: 45px;
+  height: 48px;
+  border: 0px;
+  background-color: unset;
+}
+
+.checkout-page .note .delivery-time .calender .modal-datepicker button:hover {
+  background-color: #dddddd;
+}
+
+.checkout-page .note .delivery-time .calender .modal-datepicker ul.dropdown-menu {
+  width: 100%;
+  padding: unset;
+}
+
+.checkout-page .note .delivery-time .calender .modal-datepicker ul.dropdown-menu li {
+  padding: 20px;
+}
+
+.checkout-page .note .delivery-time .calender .modal-datepicker ul.dropdown-menu li:hover {
+  background-color: #ed1c25;
+  color: #fff;
+}
+
+.checkout-page .tax-info-section .tax-info-mt-20 {
+  margin-top: 20px;
+}
+
+@media (max-width: 769px) {
+  .checkout-page .tax-info-section .tax-info-mt-20 {
+    margin-top: 15px;
+  }
+}
+
+.checkout-page .payment .payment-icon-border {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 1px;
+          box-shadow: 0 0 5px 1px;
+  border: 1px solid #d9d9d9;
+}
+
+.checkout-page .payment .payment-mg {
+  margin: 20px;
+}
+
+.checkout-page .payment .payment-img-pd {
+  padding: 30px 30px 10px 30px;
+}
+
+.checkout-page .payment .payment-title {
+  padding: 0;
+  text-align: center;
+}
+
+.checkout-page .payment .payment-black-text {
+  color: black;
+}
+
+@media (max-width: 415px) {
+  .checkout-page .payment .payment-img-pd {
+    margin-left: 25%;
+  }
+}
+
+.checkout-page .payment .payment-pickup-time .dash {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-note-date {
+  position: relative;
+  padding: 0 50px;
+}
+
+.checkout-page .payment .payment-pickup-time .calender .fa-calendar {
+  position: absolute;
+  z-index: 999;
+  top: 15px;
+  font-size: 20px;
+  left: 27px;
+}
+
+.checkout-page .payment .payment-pickup-time .calender .hide-calender {
+  padding: 0 25px !important;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-modal-datepicker button {
+  position: absolute;
+  right: 0;
+  top: -49px;
+  width: 45px;
+  height: 48px;
+  border: 0px;
+  background-color: unset;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-modal-datepicker button:hover {
+  background-color: #dddddd;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-modal-datepicker ul.dropdown-menu {
+  width: 100%;
+  padding: unset;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-modal-datepicker ul.dropdown-menu li {
+  padding: 20px;
+}
+
+.checkout-page .payment .payment-pickup-time .calender #payment-modal-datepicker ul.dropdown-menu li:hover {
+  background-color: #ed1c25;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout-page .wigget-mobile-checkout {
+    margin: 0 -5px;
+  }
+}
+
+#faqs .faq_type_left {
+  -webkit-box-shadow: 0px 0px 8px 2px #c8c8c8;
+          box-shadow: 0px 0px 8px 2px #c8c8c8;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+#faqs .faq_type_left .title_type {
+  font-size: 18px;
+  color: #d10921;
+  font-weight: 700;
+}
+
+#faqs .faq_type_left .question {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #515151;
+  cursor: pointer;
+}
+
+#faqs .faq_type_left .anwser {
+  margin-bottom: 20px;
+}
+
+#faqs .faq_type_left .question:hover {
+  color: #939393;
+}
+
+#faqs .faq_type_left .question:after {
+  font-family: FontAwesome;
+  content: '\F107';
+  color: #d10921;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px 0px #c8c8c8;
+          box-shadow: 0px 0px 8px 0px #c8c8c8;
+}
+
+#faqs .faq_type_left .active:after {
+  font-family: FontAwesome;
+  content: "\F106";
+}
+
+#faqs .faq_type_right {
+  -webkit-box-shadow: 0px 0px 8px 2px #c8c8c8;
+          box-shadow: 0px 0px 8px 2px #c8c8c8;
+  padding: 10px;
+  text-align: center;
+}
+
+#faqs .faq_type_right ul li {
+  border-bottom: 1px solid #939393;
+  padding: 5px 0;
+}
+
+#faqs .faq_type_right .line-red {
+  color: #d10921;
+  font-weight: 700;
+}
+

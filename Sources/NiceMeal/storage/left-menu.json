@@ -1,0 +1,328 @@
+{
+  "left_menu":[
+    {
+      "icon":"m-menu__link-icon flaticon-interface-7",
+      "gate":"is-admin-or-manage-all-restaurant-and-dont-has-session",
+      "title":"admin.layouts.aside_left.group.staff",
+      "name":"admin.layouts.aside_left.menu.staff.users",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon flaticon-notes",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"User List",
+          "url":"/admin/users"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-shield",
+          "gate":"is-admin",
+          "name":"Role List",
+          "url":"/admin/roles"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-users",
+      "gate":"is-admin-and-dont-has-session",
+      "title":"admin.layouts.aside_left.group.customer",
+      "name":"admin.layouts.aside_left.group.customer",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon flaticon-notes",
+          "gate":"is-admin-and-dont-has-session",
+          "name":"admin.layouts.aside_left.menu.customer.customer",
+          "url":"/admin/foodie"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-network",
+      "gate":"",
+      "title":"admin.layouts.aside_left.group.restaurant",
+      "name":"admin.layouts.aside_left.group.restaurant",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon la la-building",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.restaurant.restaurants",
+          "url":"/admin/restaurants"
+        },
+        {
+          "icon":"m-menu__link-icon la la-print",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.group.printers",
+          "url":"/admin/printers"
+        },
+        {
+          "icon":"m-menu__link-icon flaticon-coins",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.group.vouchers",
+          "url":"/admin/vouchers"
+        },
+        {
+          "icon":"m-menu__link-icon la la-thumbs-up",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.menu.restaurant.top",
+          "url":"/admin/top"
+        },
+        {
+          "icon":"m-menu__link-icon la la-tags",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.menu.restaurant.tags",
+          "url":"/admin/tags"
+        },
+        {
+          "icon":"m-menu__link-icon la la-gift",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.menu.faqs",
+          "url":"/admin/faqs"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-list-alt",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.menu.faqs_type",
+          "url":"/admin/faqs-type"
+        },
+        {
+          "icon":"m-menu__link-icon la la-bookmark-o",
+          "gate":"is-admin-or-manage-all-restaurant",
+          "name":"admin.layouts.aside_left.menu.contacts",
+          "url":"/admin/contacts"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-info",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.general_info",
+      "name":"admin.layouts.aside_left.group.general_info",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon fa fa-info-circle",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.detail_info",
+          "url":"/admin/{restaurant_slug}/detail-info"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-bullhorn",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.intro",
+          "url":"/admin/{restaurant_slug}/intro"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-eercast",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.payment_setting",
+          "url":"/admin/{restaurant_slug}/payment-settings"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-tags",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.tags",
+          "url":"/admin/{restaurant_slug}/general-info-tags"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-cogs",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.otp_setting",
+          "url":"/admin/{restaurant_slug}/otp-settings"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-percent",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.general_info.tax",
+          "url":"/admin/{restaurant_slug}/tax-info"
+        },
+        {
+          "icon":"m-menu__link-icon la la-print",
+          "gate":"",
+          "name":"admin.layouts.aside_left.group.printers",
+          "url":"/admin/{restaurant_slug}/printers"
+        },
+        {
+          "icon":"m-menu__link-icon flaticon-coins",
+          "gate":"",
+          "name":"admin.layouts.aside_left.group.promotions",
+          "url":"/admin/{restaurant_slug}/promotions"
+        },
+        {
+          "icon":"m-menu__link-icon la la-money",
+          "gate":"",
+          "name":"admin.layouts.aside_left.group.exchange_rate",
+          "url":"/admin/{restaurant_slug}/exchange-rate"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon fa fa-comment",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.reviews",
+      "name":"admin.layouts.aside_left.group.reviews",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon fa fa-shopping-cart",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.reviews",
+          "url":"/admin/{restaurant_slug}/reviews"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-tea-cup",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.menu",
+      "name":"admin.layouts.aside_left.group.menu",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon fa fa-list-alt",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.restaurant.categories",
+          "url":"/admin/{restaurant_slug}/categories"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-cutlery",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.dishes.dishes",
+          "url":"/admin/{restaurant_slug}/dishes"
+        },
+        {
+          "icon":"m-menu__link-icon flaticon-tea-cup",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.dishes.customization",
+          "url":"/admin/{restaurant_slug}/customizations"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon fa fa-life-ring",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.service",
+      "name":"admin.layouts.aside_left.group.service",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon la la-motorcycle",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.restaurant.deliveries",
+          "url":"/admin/{restaurant_slug}/restaurant-delivery-settings"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-diagram",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.report",
+      "name":"admin.layouts.aside_left.group.report",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon flaticon-statistics",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.reports.sales",
+          "url":"/admin/{restaurant_slug}/sale-report"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-line-chart",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.reports.invoices",
+          "url":"/admin/{restaurant_slug}/invoice-report"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-cart",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.orders",
+      "name":"admin.layouts.aside_left.group.orders",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon fa fa-shopping-cart",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.orders_live",
+          "url":"/admin/live"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-history",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.orders",
+          "url":"/admin/orders"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon flaticon-cogwheel",
+      "gate":"is-admin-or-manage-all-restaurant",
+      "title":"admin.layouts.aside_left.group.rule",
+      "name":"admin.layouts.aside_left.group.rule",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon flaticon-notes",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.rules.order_reject_reason",
+          "url":"/admin/order-reject-reason"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-gavel",
+          "gate":"has-restaurant-session",
+          "name":"admin.layouts.aside_left.menu.rules.commission",
+          "url":"/admin/commission-rules"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon fa fa-clock-o",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.time_setting",
+      "name":"admin.layouts.aside_left.group.time_setting",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon flaticon-calendar-1",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.time_setting.available_time",
+          "url":"/admin/{restaurant_slug}/restaurant-work-times"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-clock-o",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.time_setting.showed_time",
+          "url":"/admin/{restaurant_slug}/time-base-display-rules"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-usd",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.time_setting.priced_time",
+          "url":"/admin/{restaurant_slug}/time-base-pricing-rules"
+        }
+      ]
+    },
+    {
+      "icon":"m-menu__link-icon fa fa-compass",
+      "gate":"check-restaurant-management",
+      "title":"admin.layouts.aside_left.group.location",
+      "name":"admin.layouts.aside_left.group.location",
+      "url":"#",
+      "children":[
+        {
+          "icon":"m-menu__link-icon fa fa-map-marker",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.location.district",
+          "url":"/admin/location/district"
+        },
+        {
+          "icon":"m-menu__link-icon fa fa-map-pin",
+          "gate":"",
+          "name":"admin.layouts.aside_left.menu.location.ward",
+          "url":"/admin/location/ward"
+        }
+      ]
+    }
+  ]
+}

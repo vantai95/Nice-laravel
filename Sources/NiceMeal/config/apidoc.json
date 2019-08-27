@@ -1,0 +1,15 @@
+{
+  "name": "Nice Meal",
+  "version": "1.0.0",
+  "description": "",
+  "title": "Nice Meal APIs",
+  "url" : "http://staging-nicemeal.imt-soft.com",
+  "template" : {
+    "withCompare" : true,
+    "withGenerator" : true
+  },
+  "header": {
+    "title" : "API Request Header",
+    "filename" : "readme-api.md"
+  }
+}

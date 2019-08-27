@@ -1,0 +1,1058 @@
+define({ "api": [
+  {
+    "type": "POST",
+    "url": "/api/login",
+    "title": "Authenticate",
+    "name": "Authenticate",
+    "version": "1.0.0",
+    "description": "<p>Login</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_name",
+            "description": "<p>Email</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Password</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"email\":\"nguyenptt@imt-soft.com\",\n  \"password\":\"xxxxxx\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"data\": {\n     \"token\":\"0x2E49Cff4906d8f4890fb08E287f6179781F6165C\",\n     \"name\":\"Nguyen Phan\",\n     \"email\":\"nguyenptt@imt-soft.com\",\n     \"role\":\"Admin\",\n     \"role_id\":1,\n     \"id\":\"1\"\n   }\n\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER01\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/Auth/AuthController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/fb-authenticate",
+    "title": "Authenticate by Facebook",
+    "name": "Authenticate_by_Facebook",
+    "version": "1.0.0",
+    "description": "<p>Facebook Authenticate</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Facebook email.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>Facebook UID (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "fb_token",
+            "description": "<p>Facebook token string - this will get from Facebook Oauth (required)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"uid\": \"1111111111111111111\",\n  \"email\":\"nguyenptt@imt-soft.com\",\n  \"fb_token\":\"BC3424DFDFDDSDBC3424DFDFDDSDBC3424DFDFDDSDBC3424DFDFDDSD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"data\": {\n     \"token\":\"0x2E49Cff4906d8f4890fb08E287f6179781F6165C\",\n     \"name\":\"Nguyen Phan\",\n     \"email\":\"nguyenptt@imt-soft.com\",\n      \"id\":1\n   }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER03\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/gg-authenticate",
+    "title": "Authenticate by Google",
+    "name": "Authenticate_by_Google",
+    "version": "1.0.0",
+    "description": "<p>Google Authenticate</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Google email.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "uid",
+            "description": "<p>Google UID (required)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "gg_token",
+            "description": "<p>Google token string</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"uid\": \"1111111111111111111\",\n  \"email\":\"nguyenptt@imt-soft.com\",\n  \"gg_token\":\"BC3424DFDFDDSDBC3424DFDFDDSDBC3424DFDFDDSDBC3424DFDFDDSD\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"data\":{\n      \"token\":\"0x2E49Cff4906d8f4890fb08E287f6179781F6165C\",\n      \"name\":\"Nguyen Phan\",\n      \"email\":\"nguyenptt@imt-soft.com\",\n      \"id\":1\n    }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER03\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/change-password",
+    "title": "Change Password",
+    "name": "Change_Password",
+    "version": "1.0.0",
+    "description": "<p>Change password</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "TOKEN",
+            "description": "<p>Token</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "old_password",
+            "description": "<p>Old password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>New password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password_confirmation",
+            "description": "<p>Confirm new password</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"old_password\":\"xxxxxx\",\n  \"password\":\"yyyyyy\"\n  \"password_confirmation\":\"yyyyyy\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"message\": \"Password has been changed\"\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER03\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/Auth/AuthController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/register",
+    "title": "Register",
+    "name": "Register",
+    "version": "1.0.0",
+    "description": "<p>Register</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Email</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "confirmed_password",
+            "description": "<p>Confirmed Password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "full_name",
+            "description": "<p>Full Name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone_number",
+            "description": "<p>Phone Number</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>Gender(F/M)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "birthday",
+            "description": "<p>Birthdate(dd/mm/yyyy)</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"lang\": \"en\",\n  \"email\":\"nguyenptt@imt-soft.com\",\n  \"password\":\"xxxxxx\",\n  \"confirmed_password\":\"xxxxxx\",\n  \"full_name\":\"Nguyen Phan\",\n  \"phone_number\":\"0987654321\",\n  \"gender\":\"F\",\n  \"birthday\":\"01/01/1990\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"data\": {\n     \"token\":\"0x2E49Cff4906d8f4890fb08E287f6179781F6165C\",\n     \"name\":\"Nguyen Phan\",\n     \"email\":\"nguyenptt@imt-soft.com\",\n     \"id\":1\n   }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER02\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/register",
+    "title": "Register",
+    "name": "Register",
+    "version": "1.0.0",
+    "description": "<p>Register</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Email</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "confirmed_password",
+            "description": "<p>Confirmed Password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "full_name",
+            "description": "<p>Full Name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone_number",
+            "description": "<p>Phone Number</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>Gender(F/M)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "day",
+            "description": "<p>Day</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "month",
+            "description": "<p>Month</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "year",
+            "description": "<p>Year</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"email\":\"nguyenptt@imt-soft.com\",\n  \"password\":\"xxxxxx\",\n  \"confirmed_password\":\"xxxxxx\",\n  \"full_name\":\"Nguyen Phan\",\n  \"phone_number\":\"0987654321\",\n  \"gender\":\"female\",\n  \"day\":\"1\",\n  \"month\":\"1\",\n  \"year\":\"1990\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n   \"data\": {\n      \"token\":\"0x2E49Cff4906d8f4890fb08E287f6179781F6165C\",\n      \"name\":\"Nguyen Phan\",\n      \"email\":\"nguyenptt@imt-soft.com\",\n      \"id\":1\n   }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"USER02\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/Auth/AuthController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/password/reset",
+    "title": "Reset Password",
+    "name": "Reset_Password",
+    "version": "1.0.0",
+    "description": "<p>Reset Password</p>",
+    "group": "AUTHENTICATE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Email</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>New password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password_confirmation",
+            "description": "<p>Confirm new password</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Reset password token</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"email\": \"nguyenptt@imt-soft.com\",\n  \"password\": \"yyyyyy\"\n  \"password_confirmation\": \"yyyyyy\",\n  \"token\": \"8tVzaPATCak1WzUQEPXFwx5dCwnCXfV7d1dcvB4bTkc08tyRr3m4lHmOYth2rv\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" => true,\n   \"message\" => \"Password has been reset\"\n   \"data\": {\n       \"id\": 1,\n       \"full_name\": \"Nguyen Phan\",\n       \"email\": \"nguyenptt@imt-soft.com\",\n       \"phone\": \"0123456789\",\n    }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n   \"success\" : false\n   \"error_code\": \"USER04\"\n   \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/Auth/AuthController.php",
+    "groupTitle": "AUTHENTICATE"
+  },
+  {
+    "type": "GET",
+    "url": "/api/districts",
+    "title": "Get District Info",
+    "name": "Districts",
+    "version": "1.0.0",
+    "description": "<p>Return District and Ward Info</p>",
+    "group": "HOMEPAGE",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"data\":[{\n     \"id\": 1,\n     \"name\": \"District 1\",\n     \"wards\":[\n        {\n          \"id\": 1,\n          \"name\": \"Ben Thanh\"\n        }]\n     },\n     {\n       \"id\": 2,\n       \"name\": \"District 2\",\n       \"wards\":[\n          {\n             \"id\": 12,\n             \"name\": \"Thao Dien\"\n          }]\n    }]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\": false\n  \"error_code\": \"COMMON01\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "HOMEPAGE"
+  },
+  {
+    "type": "POST",
+    "url": "/api/checkout",
+    "title": "Checkout",
+    "name": "Checkout",
+    "version": "1.0.0",
+    "description": "<p>Checkout</p>",
+    "group": "ORDER",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "  {\n    \"info\": {\n        \"payment_amount\": \"100000\",\n        \"delivery_time\": \"asap\",\n        \"title\": \"1\",\n        \"full_name\": \"admin\",\n        \"email\": \"mantm3101.1@gmail.com\",\n        \"phone\": 906448224,\n        \"register\": 0,\n        \"address\": {\n            \"full_address\": \"dsadsadsa\"\n        },\n        \"specific_time\": \"12:52\",\n        \"residencetype\": {\n            \"value\": \"house\"\n        },\n        \"district\": 760,\n        \"ward\": 26740,\n        \"direction\": \"dsadsadsa\"\n    },\n    \"cart\": {\n        \"items\": [\n            {\n                \"dish\": {\n                    \"dish_name\": \"[WB-1] SHIRAZ (750ml)\",\n                    \"id\": 651,\n                    \"price\": 499000\n                },\n                \"quantity\": 2,\n                \"custom\": [],\n                \"option\": [],\n                \"option_quantity\": []\n            },\n            {\n                \"dish\": {\n                    \"dish_name\": \"[WB-2] CABERNET SAUVIGNON (750ml)\",\n                    \"id\": 661,\n                    \"price\": 499000\n                },\n                \"quantity\": 2,\n                \"custom\": {\n                    \"1\": {\n                        \"custom_name\": \"Size\",\n                        \"id\": 1,\n                        \"price\": 0\n                    },\n                    \"11\": {\n                        \"custom_name\": \"[SPE-3] Gravy sauce\",\n                        \"id\": 11,\n                        \"price\": 0\n                    }\n                },\n                \"option\": {\n                    \"1\": {\n                        \"option_name\": \"abc 123\",\n                        \"customization_id\": 1,\n                        \"id\": 1,\n                        \"price\": 10000\n                    },\n                    \"41\": {\n                        \"option_name\": \"dsadas dsadas\",\n                        \"customization_id\": 11,\n                        \"id\": 41,\n                        \"price\": 10000\n                    }\n                },\n                \"option_quantity\": {\n                    \"1\": 1,\n                    \"41\": 1\n                }\n            }\n        ],\n        \"sub_total\": 2036000,\n        \"payment\": \"cod_payment\",\n        \"order_note\": \"\",\n        \"restaurant\": \"oh-my-meal\",\n        \"service\": \"delivery\",\n        \"delivery_fee\": 19000,\n        \"order_total\": 2055000,\n        \"total_item\": 4,\n        \"tax\": 50,\n        \"checkbill\": 0,\n        \"tax_type\": 1\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   {\n        \"order_id\": 28,\n        \"send_left\": 1,\n        \"otp_verify\": 1,\n        \"otp_created_at\": \"2019-03-13 12:56:37\"\n    }\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/Checkout/CheckoutController.php",
+    "groupTitle": "ORDER"
+  },
+  {
+    "type": "POST",
+    "url": "/api/confirm-otp",
+    "title": "Confirm OTP",
+    "name": "Confirm_OTP",
+    "version": "1.0.0",
+    "description": "<p>Confirm OTP</p>",
+    "group": "ORDER",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n      \"order_id\": 26,\n      \"otp\": 425774\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   'success': true,\n   'message': 'OTP confirmed'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "OTP expired",
+          "content": "HTTP/1.1 200 OK\n{\n   'success': false,\n   'message': 'OTP expired'\n}",
+          "type": "json"
+        },
+        {
+          "title": "OTP is not correct",
+          "content": "HTTP/1.1 200 OK\n{\n   'success': false,\n   'message': 'OTP is not correct'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/Checkout/CheckoutController.php",
+    "groupTitle": "ORDER"
+  },
+  {
+    "type": "GET",
+    "url": "/api/order/polling-order",
+    "title": "Polling Order",
+    "name": "PollingOrder",
+    "version": "1.0.0",
+    "description": "<p>Get order detail for printer</p>",
+    "group": "PRINTER",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "a",
+            "description": "<p>restaurant id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "u",
+            "description": "<p>printer name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "p",
+            "description": "<p>printer token</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"a\": 1\n  \"u\": printer1\n  \"p\": tjrnu9VlGpsI7gj0\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\" : true,\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"ExampleC0de\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/OrdersController.php",
+    "groupTitle": "PRINTER"
+  },
+  {
+    "type": "GET",
+    "url": "/api/filter_param",
+    "title": "Get Filter Param",
+    "name": "Filter_Param",
+    "version": "1.0.0",
+    "description": "<p>Return list Param in filter</p>",
+    "group": "RESTAURANTS",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\": true,\n   \"data\":{\n      \"cuisines\": [\n      {\n          \"id\": 0,\n          \"name\": \"All\"\n      },\n      {\n          \"id\": 1,\n          \"name\": \"Italian\"\n      },\n      {\n          \"id\": 2,\n          \"name\": \"American\"\n      }],\n      \"categories\": [\n      {\n          \"id\": 0,\n          \"name\": \"All\"\n      },\n      {\n          \"id\": 1,\n          \"name\": \"Breakfast - Lunch - Dinner\"\n      },\n      {\n           \"id\": 2,\n           \"name\": \"Pizza - Pasta - Panini\"\n      }],\n      \"status\": [\n      {\n          \"id\": 1,\n          \"name\": \"New\",\n      },\n      {\n          \"id\": 2,\n          \"name\": \"NoStatus\",\n      },\n      {\n          \"id\": 3,\n          \"name\": \"Promotion\",\n      },\n      {\n          \"id\": 4,\n          \"name\": \"Popular\",\n      },\n      {\n          \"id\": 5,\n          \"name\": \"Hight Quality\",\n      }],\n      \"services\": [\n          \"Delivery\",\n          \"Pickup\"\n      ],\n      \"payment_methods\": [\n          \"COD\",\n          \"Online Payment\"\n     ]\n   }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\": false\n  \"error_code\": \"RESTAURANT00\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "RESTAURANTS"
+  },
+  {
+    "type": "GET",
+    "url": "/api/restaurant_info/:restaurant_id",
+    "title": "Restaurant Info",
+    "name": "Restaurant_Info",
+    "version": "1.0.0",
+    "description": "<p>Return restaurant info</p>",
+    "group": "RESTAURANTS",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "restaurant_id",
+            "description": "<p>Restaurant ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\": true,\n   \"data\": {\n     \"id\": 1,\n     \"name\": \"Oh!MyMeal\",\n     \"description\": \"Italian, Pizza-Pasta-Panii\",\n     \"status\": 1,\n     \"logo\": \"http://localhost:8000/common-assets/img/restaurant_image.jpg\",\n     \"working_status\": \"Open Now\",\n     \"address\": \"Bình Thạnh District\",\n     \"service\": [\n         \"Pickup\",\n         \"Delivery\"\n     ],\n     \"payment_method\":  [\n         \"Online Payment\",\n         \"COD\"\n     ],\n     \"delivery_cost\": \"19.000 VNĐ\",\n     \"min_order_delivery_cost\": \"99.000 VNĐ\" ,\n     \"working_times\": [\n       {\n          \"day\": \"Monday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Tueday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Wednesday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Thursday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Friday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Saturday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       },\n       {\n          \"day\": \"Sunday\",\n          \"value\": \"10:30 AM - 22:00 PM\"\n       }\n     ],\n     \"delivery_settings\": [\n       {\n          \"id\": 1,\n          \"location\": \"District 1\",\n          \"minimum_order_value\": \"99.000 VNĐ\",\n          \"minimum_order_value_unit\": 99000,\n          \"delivery_fee\": \"19.000 VNĐ\",\n          \"delivery_unit\": 19000,\n          \"order_value_from\": 99000,\n          \"order_value_to\": 199000\n       },\n       {\n          \"id\": 2,\n          \"location\": \"District 1\",\n          \"minimum_order_value\": \"200.000 VNĐ\",\n          \"minimum_order_value_unit\": 200000,\n          \"delivery_fee\": \"0 VNĐ\",\n          \"delivery_unit\": 0,\n          \"order_value_from\": 200000,\n          \"order_value_to\": 2000000\n       }\n     ],\n     \"categories\": [\n       {\n         \"id\": 1,\n         \"name\": \"Soft Drink\",\n         \"sequence\": 1,\n         \"dishes\":[\n           {\n             \"id\": 1,\n             \"name\": \"Coke\",\n             \"sequence\": 1,\n             \"price\": \"30.000 VNĐ\",\n             \"price_unit\": 30000\n           },\n           {\n              \"id\": 2,\n              \"name\": \"Sprite\",\n              \"sequence\": 2,\n              \"price\": \"50.000 VNĐ\",\n              \"price_unit\": 50000\n           }\n          ]\n        },\n        {\n          \"id\": 2,\n          \"name\": \"Asian Meal\",\n          \"sequence\": 2,\n          \"dishes\": [\n            {\n              \"id\":3,\n              \"name\":\"Egg fried rice\",\n              \"sequence\":1,\n              \"price\": \"80.000 VNĐ\",\n              \"price_unit\":80000\n            },\n            {\n              \"id\":4,\n              \"name\":\"Pork fried rice\",\n              \"sequence\":2,\n              \"price\": \"110.000 VNĐ\",\n              \"price_unit\":110000\n            },\n          ]\n        }\n     ]\n   }\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\" : false\n  \"error_code\": \"RESTAURANT02\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "RESTAURANTS"
+  },
+  {
+    "type": "GET",
+    "url": "/api/search-restaurants?district_id=:district_id&ward_id=:ward_id",
+    "title": "Search Restaurant",
+    "name": "Search_Restaurant",
+    "version": "1.0.0",
+    "description": "<p>Return restaurant list</p>",
+    "group": "RESTAURANTS",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "CLI-HEADER",
+            "description": "<p>The key to access API server</p>"
+          },
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "LANGUAGE",
+            "description": "<p>Language Code</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "district_id",
+            "description": "<p>District Id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "ward_id",
+            "description": "<p>Ward Id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "cuisine",
+            "description": "<p>Filter by Cuisine</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "category",
+            "description": "<p>Filter by Category</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "status",
+            "description": "<p>Filter by Status</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "service",
+            "description": "<p>Filter by Service(delivery or pickup)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "payment",
+            "description": "<p>Filter by Payment Method(cod_payment or online_payment)</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "keyword",
+            "description": "<p>Filter by KeyWord</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success Response",
+          "content": "HTTP/1.1 200 OK\n{\n   \"success\": true,\n   \"data\":[{\n     \"id\": 1,\n     \"name\": \"Oh!MyMeal\",\n     \"description\": \"Italian, Pizza-Pasta-Panini\",\n     \"status\": 1,\n     \"logo\": \"http://localhost:8000/common-assets/img/restaurant_image.jpg\",\n     \"working_status\": \"Open Now\",\n     \"address\": \"Bình Thạnh District\",\n     \"service\": [\n          \"Pickup\",\n          \"Delivery\"\n     ],\n     \"payment_method\": [\n          \"Online Payment\",\n          \"COD\"\n     ],\n     \"delivery_cost\": \"19.000 VNĐ\",\n     \"min_order_delivery_cost\": \"99.000 VNĐ\"\n     },\n     {\n     \"id\": 2,\n     \"name\": \"My Sushi\",\n     \"description\": \"Japanese, Sushi - Kimbab - Roli\",\n     \"status\": 1,\n     \"logo\": \"http://localhost:8000/common-assets/img/restaurant_image.jpg\",\n     \"working_status\": \"Open Now\",\n     \"address\": \"District 7\",\n     \"service\": [\n         \"Pickup\",\n         \"Delivery\"\n     ],\n     \"payment_method\":[\n         \"Online Payment\",\n         \"COD\"\n     ],\n     \"delivery_cost\": \"9.000 VNĐ\",\n     \"min_order_delivery_cost\": \"99.000 VNĐ\"\n   }]\n }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "HTTP/1.1 404 Not Found\n{\n  \"success\": false\n  \"error_code\": \"RESTAURANT01\"\n  \"message\": \"Error, please check you params\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/Controllers/Api/User/HomeController.php",
+    "groupTitle": "RESTAURANTS"
+  }
+] });
